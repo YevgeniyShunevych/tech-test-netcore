@@ -28,35 +28,52 @@
                 _ => string.Empty
             };
 
-            <li class="list-group-item @contextualClass">
-                
+            <li class="list-group-item @contextualClass" data-is-done="@item.IsDone">
+
                 <div class="row">
 
-                <div class="col-md-8">
-                    <a asp-action="Edit" asp-controller="TodoItem" asp-route-todoItemId="@item.TodoItemId">
+                    <div class="col-md-8">
+                        <a asp-action="Edit" asp-controller="TodoItem" asp-route-todoItemId="@item.TodoItemId">
 
-                        @if (item.IsDone)
-                        {
-                            <s>@item.Title</s>
-                        }
-                        else
-                        {
-                            <text>@item.Title</text>
-                        }
-                    </a>
-                </div>
+                            @if (item.IsDone)
+                            {
+                                <s>@item.Title</s>
+                            }
+                            else
+                            {
+                                <text>@item.Title</text>
+                            }
+                        </a>
+                    </div>
 
-                <div class="col-md-4 text-right">
-                    <small>
-                        @item.ResponsibleParty.UserName
+                    <div class="col-md-4 text-right">
+                        <small>
+                            @item.ResponsibleParty.UserName
 
-                        <img src="https://www.gravatar.com/avatar/@Gravatar.GetHash(item.ResponsibleParty.Email)?s=30"/>
+                            <img src="https://www.gravatar.com/avatar/@Gravatar.GetHash(item.ResponsibleParty.Email)?s=30" />
 
-                    </small>
-                </div>
+                        </small>
+                    </div>
                 </div>
 
             </li>
         }
     </ul>
+
+    <div class="checkbox">
+        <label>
+            <input id="doneItemsVisibilityToggle" type="checkbox" /> Hide done items
+        </label>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#doneItemsVisibilityToggle').change(function () {
+                var hideDoneItems = this.checked;
+                $('[data-is-done=True]').toggle(!hideDoneItems);
+            });
+        });
+    </script>
+}
