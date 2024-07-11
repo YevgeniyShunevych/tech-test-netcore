@@ -21,19 +21,12 @@
 
         @foreach (var item in Model.Items)
         {
-            string contextualClass;
-            switch (item.Importance)
+            string contextualClass = item.Importance switch
             {
-                case Importance.High:
-                    contextualClass = "list-group-item-danger";
-                    break;
-                case Importance.Low:
-                    contextualClass = "list-group-item-info";
-                    break;
-                default:
-                    contextualClass = "";
-                    break;
-            }
+                Importance.High => "list-group-item-danger",
+                Importance.Low => "list-group-item-info",
+                _ => string.Empty
+            };
 
             <li class="list-group-item @contextualClass">
                 
