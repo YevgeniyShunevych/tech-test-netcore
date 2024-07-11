@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Todo.Data.Entities {
+namespace Todo.Data.Entities
+{
     public class TodoItem
     {
         public int TodoItemId { get; set; }
