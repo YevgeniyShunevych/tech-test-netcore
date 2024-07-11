@@ -7,6 +7,7 @@ namespace Todo.Models.TodoItems
     {
         public int TodoListId { get; set; }
 
+        [Required]
         public string Title { get; set; }
 
         public string TodoListTitle { get; set; }

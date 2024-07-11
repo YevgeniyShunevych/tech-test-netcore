@@ -11,6 +11,7 @@ namespace Todo.Models.TodoItems
 
         public int TodoItemId { get; set; }
 
+        [Required]
         public string Title { get; set; }
 
         [Display(Name = "Done")]
