@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SOLUTION.md = SOLUTION.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.E2ETests", "Todo.E2ETests\Todo.E2ETests.csproj", "{F62DF6F0-7911-43CC-8F47-3BD6EC12AD65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{1E5DC103-17C1-4E16-BF56-215356FF3972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E5DC103-17C1-4E16-BF56-215356FF3972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E5DC103-17C1-4E16-BF56-215356FF3972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62DF6F0-7911-43CC-8F47-3BD6EC12AD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62DF6F0-7911-43CC-8F47-3BD6EC12AD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62DF6F0-7911-43CC-8F47-3BD6EC12AD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62DF6F0-7911-43CC-8F47-3BD6EC12AD65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

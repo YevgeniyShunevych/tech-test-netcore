@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "Development": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:51526;http://localhost:51527"
+    },
+
+    "LocalE2ETests": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "LocalE2ETests"
+      },
+      "applicationUrl": "http://localhost:51528"
+    }
+  }
+}
