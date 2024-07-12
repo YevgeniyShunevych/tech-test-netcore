@@ -11,7 +11,7 @@ public sealed class SetUpFixture
     [OneTimeSetUp]
     public async Task GlobalSetUp()
     {
-        string driverAlias = TestContext.Parameters.Get("DriverAlias", DriverAliases.Chrome);
+        string driverAlias = TestContext.Parameters.Get("DriverAlias", "chrome-headless");
 
         // Find information on AtataContext configuration on https://atata.io/getting-started/#configuration
         // Find information on Atata JSON configuration on https://github.com/atata-framework/atata-configuration-json
