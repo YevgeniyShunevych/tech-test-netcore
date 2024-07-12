@@ -18,6 +18,8 @@ jobs:
         dotnet-version: 8.0.x
     - name: Install EF tools
       run: dotnet tool install --global dotnet-ef
+    - name: Restore tools
+      run: dotnet tool restore
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
